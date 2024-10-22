@@ -6,14 +6,15 @@
 #    By: rdalal <rdalal@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/10/21 14:57:27 by rdalal            #+#    #+#              #
-#    Updated: 2024/10/21 20:06:12 by rdalal           ###   ########.fr        #
+#    Updated: 2024/10/22 22:43:57 by rdalal           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME	= fractol
 
 SRCS_FRAC	=	error_handling.c fractol.c equation_algo.c \
-				draw_mandelbrot.c draw_julia.c draw_sierpinski_carpet.c
+				draw_mandelbrot.c draw_julia.c draw_sierpinski_carpet.c \
+				mlx_utils.c palette_handling.c colors_handling.c
 
 FRAC_PATH	= srcs/
 

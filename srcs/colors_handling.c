@@ -6,7 +6,7 @@
 /*   By: rdalal <rdalal@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/21 18:32:38 by rdalal            #+#    #+#             */
-/*   Updated: 2024/10/21 19:48:05 by rdalal           ###   ########.fr       */
+/*   Updated: 2024/10/22 14:40:41 by rdalal           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ int	get_color(int rgbt, char i)
 	else if (i == 'b')
 		return (rgbt & 0xFF);
 	else
-		return((rgbt >> 24) & 0xFF);
+		return ((rgbt >> 24) & 0xFF);
 }
 
 int	add_shade(double f, int color)
