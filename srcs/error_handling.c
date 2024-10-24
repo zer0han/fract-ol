@@ -6,7 +6,7 @@
 /*   By: rdalal <rdalal@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/21 17:51:22 by rdalal            #+#    #+#             */
-/*   Updated: 2024/10/22 14:45:31 by rdalal           ###   ########.fr       */
+/*   Updated: 2024/10/24 19:56:52 by rdalal           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,7 @@ void	error_mlx(char *model)
 
 void	error_args(void)
 {
-	ft_printf("%s: Wrong input\n");
+	ft_printf("%s: Wrong input stupid\n");
 	ft_printf("\t -%s\n\t- %s\n\t- %s\n\t- %s\n\t- %s\n, \
 		Frac1, Frac2, Frac3, Frac4, Frac5, Frac6");
 	exit (2);

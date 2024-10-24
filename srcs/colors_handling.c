@@ -6,7 +6,7 @@
 /*   By: rdalal <rdalal@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/21 18:32:38 by rdalal            #+#    #+#             */
-/*   Updated: 2024/10/22 14:40:41 by rdalal           ###   ########.fr       */
+/*   Updated: 2024/10/24 17:58:41 by rdalal           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,9 +37,9 @@ int	add_shade(double f, int color)
 	int	new_b;
 
 	new_t = get_color(color, 't');
-	new_r = get_color(color, 'r');
-	new_g = get_color(color, 'g');
-	new_b = get_color(color, 'b');
+	new_r = get_color(color, 'r') * (1 - f);
+	new_g = get_color(color, 'g') * (1 - f);
+	new_b = get_color(color, 'b') * (1 - f);
 	return (make_rgbt(new_r, new_g, new_b, new_t));
 }
 

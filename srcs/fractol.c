@@ -6,7 +6,7 @@
 /*   By: rdalal <rdalal@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/21 20:01:13 by rdalal            #+#    #+#             */
-/*   Updated: 2024/10/22 22:45:56 by rdalal           ###   ########.fr       */
+/*   Updated: 2024/10/24 19:56:22 by rdalal           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,7 +56,7 @@ int	show_img(t_vars *vars)
 			else if (vars->model == 2)
 				mandel_cube(vars, x, y);
 			else if (vars->model == 3)
-				mandel__quatro(vars, x, y);
+				mandel_quatro(vars, x, y);
 			else if (vars->model == 4)
 				julia(vars, x, y);
 			else if (vars->model == 5)
@@ -77,8 +77,21 @@ int	expose(t_vars *vars)
 
 int	main(int argc, char **argv)
 {
-	t_vars	
-}
-{
+	t_vars	vars;
+
+	if (argc != 2 || !ft_isfractal(argv[1]))
+		error_args();
+	vars.mlx = mlx_init();
+	if (!vars.mlx)
+		error_mlx(argv[1]);
+	vars_init (&vars, argv[1]);
+	vars.win = mlx_new_window(vars.mlx, SIZE_W, SIZE_L, argv[1]);
+	mlx_loop_hook(vars.mlx, show_img, &vars);
+	mlx_hook(vars.win, KEY_PRESS, 1L << 0, key_handler, &vars);
+	mlx_hook(vars.win, MOUSE_PRESS, 1L << 2, zoom, &vars);
+	mlx_hook(vars.win, CLOSE, 1L << 2, close_window, &vars);
+	mlx_expose_hook(vars.win, expose, &vars);
+	mlx_loop(vars.mlx);
+	destroy(&vars);
 	return (0);
 }

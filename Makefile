@@ -6,15 +6,16 @@
 #    By: rdalal <rdalal@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/10/21 14:57:27 by rdalal            #+#    #+#              #
-#    Updated: 2024/10/22 22:43:57 by rdalal           ###   ########.fr        #
+#    Updated: 2024/10/24 19:56:43 by rdalal           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME	= fractol
 
-SRCS_FRAC	=	error_handling.c fractol.c equation_algo.c \
-				draw_mandelbrot.c draw_julia.c draw_sierpinski_carpet.c \
-				mlx_utils.c palette_handling.c colors_handling.c
+SRCS_FRAC	=	error_handling.c fractol.c burning_ship.c\
+				mandelbrot.c julia.c  \
+				mlx_utils.c palette_handling.c colors_handling.c \
+				sierpinski_carpet.c
 
 FRAC_PATH	= srcs/
 
@@ -42,7 +43,7 @@ $(LIBFT):
 			$(MAKE) -C $(LIBFT_PATH)
 
 $(NAME):	$(LIBFT) $(OBJS) $(HEAD)
-			$(CC) $(CFLAGS) $(OBJS) -L$(MLX) $(MLXFLAGS) $(LIBFT) -o $(NAME)
+			$(CC) $(CFLAGS) $(OBJS) -L$(MLX) -I$(MLX) $(MLXFLAGS) $(LIBFT) -o $(NAME)
 
 %.o: %.c
 		$(CC) $(CFLAGS) -I$(HEAD) -I$(LIBFT_H_PATH) -I$(MLX) -c $< -o $@

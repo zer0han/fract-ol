@@ -6,7 +6,7 @@
 /*   By: rdalal <rdalal@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/21 15:01:17 by rdalal            #+#    #+#             */
-/*   Updated: 2024/10/22 22:42:36 by rdalal           ###   ########.fr       */
+/*   Updated: 2024/10/24 21:31:05 by rdalal           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,7 @@
 # include <string.h>
 # include <fcntl.h>
 # include <sys/wait.h>
+# include <math.h>
 # include <errno.h>
 # define IN STDIN_FILENO
 # define OUT STDOUT_FILENO
@@ -38,8 +39,8 @@
 # define F4 "mandel_quatro"
 # define F5 "burning_ship"
 # define F6 "sierpinski_carpet"
-# define SIZE_L 960
-# define SIZE_W 540
+# define SIZE_L 720
+# define SIZE_W 1080
 # define STEP 10.0
 # define ZOOM 1.2
 # define P_NAME "fractol"
@@ -110,11 +111,18 @@ int		destroy(t_vars *vars);
 
 int		key_handler(int keycode, t_vars *vars);
 
-int		zoom(t_vars *vars, int button, int x, int y);
+int		zoom(int button, int x, int y, t_vars *vars);
 
 int		close_window(t_vars *vars);
 
 /***palette_handling***/
 int		get_pal(int i, int pal_no);
+
+/***fractol***/
+int		show_img(t_vars *vars);
+
+int		expose(t_vars *vars);
+
+int		main(int argc, char **argv);
 
 #endif

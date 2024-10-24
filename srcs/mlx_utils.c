@@ -6,7 +6,7 @@
 /*   By: rdalal <rdalal@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/22 18:19:10 by rdalal            #+#    #+#             */
-/*   Updated: 2024/10/22 20:07:40 by rdalal           ###   ########.fr       */
+/*   Updated: 2024/10/24 21:28:47 by rdalal           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,7 +55,7 @@ int	key_handler(int keycode, t_vars *vars)
 	return (0);
 }
 
-int	zoom(t_vars *vars, int button, int x, int y)
+int	zoom(int button, int x, int y, t_vars *vars)
 {
 	double	fx;
 	double	fy;
