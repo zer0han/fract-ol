@@ -6,7 +6,7 @@
 /*   By: rdalal <rdalal@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/21 20:05:33 by rdalal            #+#    #+#             */
-/*   Updated: 2024/10/08 14:22:43 by rdalal           ###   ########.fr       */
+/*   Updated: 2024/10/25 20:04:39 by rdalal           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,6 +85,8 @@ char	*ft_strrchr(char *str, int c);
 char	*ft_strtrim(char const *s1, char const *set);
 
 char	*ft_substr(char const *s, unsigned int start, size_t len);
+
+double	ft_atof(const char *nptr);
 
 typedef struct s_list
 {

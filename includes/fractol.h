@@ -6,7 +6,7 @@
 /*   By: rdalal <rdalal@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/21 15:01:17 by rdalal            #+#    #+#             */
-/*   Updated: 2024/10/24 21:31:05 by rdalal           ###   ########.fr       */
+/*   Updated: 2024/10/25 22:08:40 by rdalal           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@
 # define SIZE_L 720
 # define SIZE_W 1080
 # define STEP 10.0
-# define ZOOM 1.2
+# define ZOOM 2
 # define P_NAME "fractol"
 
 typedef struct s_data

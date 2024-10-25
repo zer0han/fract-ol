@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   draw_burning_ship.c                                :+:      :+:    :+:   */
+/*   burning_ship.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rdalal <rdalal@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/22 15:55:33 by rdalal            #+#    #+#             */
-/*   Updated: 2024/10/22 19:00:49 by rdalal           ###   ########.fr       */
+/*   Updated: 2024/10/25 19:32:27 by rdalal           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ void	burning_ship(t_vars *vars, int x, int y)
 	while (++i < vars->max_iter)
 	{
 		temp = vars->zx * vars->zx - vars->zy * vars->zy + cx;
-		vars->zy = fabs(2.0 * vars ->zx * vars-> zy) + cy;
+		vars->zy = fabs(2.0 * vars->zx * vars-> zy) + cy;
 		vars->zx = temp;
 		if (vars->zx * vars->zx + vars->zy * vars->zy >= 4.)
 			break ;

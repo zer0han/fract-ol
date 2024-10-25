@@ -6,7 +6,7 @@
 /*   By: rdalal <rdalal@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/21 20:01:13 by rdalal            #+#    #+#             */
-/*   Updated: 2024/10/24 19:56:22 by rdalal           ###   ########.fr       */
+/*   Updated: 2024/10/25 20:05:35 by rdalal           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,14 +28,14 @@ static void	vars_init(t_vars *vars, char *model)
 	vars->img.addr = mlx_get_data_addr(vars->img.img, &vars->img.bpp, \
 						&vars->img.line_len, &vars->img.enddian);
 	vars->model = ft_isfractal(model);
-	if (vars->model == 2)
+	if (vars->model == 1)
 	{
-		ft_printf("Input real nbr float: ");
+		ft_printf("Put real nbr float: ");
 		real = get_next_line(IN);
-		ft_printf("Input imgnry nbr float: ");
+		ft_printf("Put imgnry nbr float: ");
 		imgnry = get_next_line(IN);
-		vars->cx = ft_atoi(real);
-		vars->cy = ft_atoi(imgnry);
+		vars->cx = ft_atof(real);
+		vars->cy = ft_atof(imgnry);
 	}
 }
 
@@ -52,13 +52,13 @@ int	show_img(t_vars *vars)
 		while (++y < SIZE_L)
 		{
 			if (vars->model == 1)
-				mandelbrot(vars, x, y);
-			else if (vars->model == 2)
-				mandel_cube(vars, x, y);
-			else if (vars->model == 3)
-				mandel_quatro(vars, x, y);
-			else if (vars->model == 4)
 				julia(vars, x, y);
+			else if (vars->model == 2)
+				mandelbrot(vars, x, y);
+			else if (vars->model == 3)
+				mandel_cube(vars, x, y);
+			else if (vars->model == 4)
+				mandel_quatro(vars, x, y);
 			else if (vars->model == 5)
 				burning_ship(vars, x, y);
 			else if (vars->model == 6)

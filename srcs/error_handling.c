@@ -6,7 +6,7 @@
 /*   By: rdalal <rdalal@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/21 17:51:22 by rdalal            #+#    #+#             */
-/*   Updated: 2024/10/24 19:56:52 by rdalal           ###   ########.fr       */
+/*   Updated: 2024/10/25 19:08:52 by rdalal           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ static int	ft_strcmp(char *s1, char *s2)
 	while (s1[i] || s2[i])
 	{
 		if (s1[i] != s2[i])
-			return (s1[i] - s2[i]);
+			return (1);
 		i++;
 	}
 	return (0);
@@ -54,6 +54,6 @@ void	error_args(void)
 {
 	ft_printf("%s: Wrong input stupid\n");
 	ft_printf("\t -%s\n\t- %s\n\t- %s\n\t- %s\n\t- %s\n, \
-		Frac1, Frac2, Frac3, Frac4, Frac5, Frac6");
+		F1, F2, F3, F4, F5, F6");
 	exit (2);
 }

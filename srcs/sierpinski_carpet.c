@@ -6,30 +6,11 @@
 /*   By: rdalal <rdalal@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/21 20:08:24 by rdalal            #+#    #+#             */
-/*   Updated: 2024/10/22 22:41:41 by rdalal           ###   ########.fr       */
+/*   Updated: 2024/10/25 19:03:43 by rdalal           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fractol.h"
-
-/*void	sierpinski_carpet(t_vars *vars, int x, int y, int size)
-{
-	int		i;
-	double	temp;
-	double	cx;
-	double	cy;
-
-	i = 0;
-	vars->zx = 0.0;
-	vars->zy = 0.0;
-	cx = vars->x0 + (x - SIZE_W / 2) * vars->zoom;
-	cy = vars->y0 + (y - SIZE_L / 2) * vars->zoom;
-	while (++i < vars->max_iter)
-	{
-		temp = vars->zx;
-		
-	}
-}*/
 
 void	sierpinski_carpet(t_vars *vars, int x, int y, int size)
 {

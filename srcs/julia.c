@@ -6,7 +6,7 @@
 /*   By: rdalal <rdalal@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/21 20:08:27 by rdalal            #+#    #+#             */
-/*   Updated: 2024/10/24 20:43:47 by rdalal           ###   ########.fr       */
+/*   Updated: 2024/10/25 20:17:17 by rdalal           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ void	julia(t_vars *vars, int x, int y)
 			break ;
 	}
 	if (i == vars->max_iter)
-		put_mlx_pixel(&vars->img, x, y, make_rgbt(11, 5, 0, 0));
+		put_mlx_pixel(&vars->img, x, y, make_rgbt(0, 12, 6, 0));
 	else
 		put_mlx_pixel(&vars->img, x, y, get_pal(i, vars->pal_no));
 }

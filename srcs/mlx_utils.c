@@ -6,7 +6,7 @@
 /*   By: rdalal <rdalal@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/22 18:19:10 by rdalal            #+#    #+#             */
-/*   Updated: 2024/10/24 21:28:47 by rdalal           ###   ########.fr       */
+/*   Updated: 2024/10/25 21:14:22 by rdalal           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,6 +50,10 @@ int	key_handler(int keycode, t_vars *vars)
 		vars->pal_no = 2;
 	else if (keycode == '3')
 		vars->pal_no = 3;
+	else if (keycode == 'z')
+		vars->cy += 0.01;
+	else if (keycode == 'x')
+		vars->cx -= 0.01;
 	else if (keycode == 65307 || keycode == 'q')
 		destroy(vars);
 	return (0);
