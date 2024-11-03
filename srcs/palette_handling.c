@@ -6,7 +6,7 @@
 /*   By: rdalal <rdalal@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/22 17:01:16 by rdalal            #+#    #+#             */
-/*   Updated: 2024/10/25 22:08:27 by rdalal           ###   ########.fr       */
+/*   Updated: 2024/11/03 19:19:25 by rdalal           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,47 +15,47 @@
 static int	pal_1(int i)
 {
 	if (i % 8 == 0)
-		return (make_rgbt(0, 76, 153, 23));
+		return (make_rgbt(255, 255, 0, 255));
 	else if (i % 8 == 1)
-		return (make_rgbt(102, 102, 255, 57));
+		return (make_rgbt(0, 0, 139, 139));
 	else if (i % 8 == 2)
-		return (make_rgbt(255, 51, 153, 220));
+		return (make_rgbt(0, 0, 144, 144));
 	else if (i % 8 == 3)
-		return (make_rgbt(153, 243, 20, 130));
+		return (make_rgbt(0, 0, 148, 148));
 	else if (i % 8 == 4)
-		return (make_rgbt(153, 153, 255, 150));
+		return (make_rgbt(0, 0, 152, 152));
 	else if (i % 8 == 5)
-		return (make_rgbt(0, 0, 153, 42));
+		return (make_rgbt(0, 0, 156, 156));
 	else if (i % 8 == 6)
-		return (make_rgbt(157, 246, 240, 98));
+		return (make_rgbt(255, 255, 255, 255));
 	else
-		return (make_rgbt(102, 0, 204, 198));
+		return (make_rgbt(0, 0, 160, 160));
 }
 
 static int	pal_2(int i)
 {
 	if (i % 4 == 0)
-		return (make_rgbt(250, 112, 112, 100));
+		return (make_rgbt(0, 212, 120, 100));
 	else if (i % 4 == 1)
-		return (make_rgbt(254, 253, 237, 200));
+		return (make_rgbt(154, 173, 147, 200));
 	else if (i % 4 == 2)
-		return (make_rgbt(198, 235, 197, 130));
+		return (make_rgbt(232, 156, 227, 190));
 	else
-		return (make_rgbt(161, 195, 152, 110));
+		return (make_rgbt(142, 209, 142, 210));
 }
 
 static int	pal_3(int i)
 {
 	if (i % 5 == 0)
-		return (make_rgbt(229, 61, 0, 120));
+		return (make_rgbt(198, 161, 150, 220));
 	else if (i % 5 == 1)
-		return (make_rgbt(255, 233, 0, 230));
+		return (make_rgbt(165, 143, 120, 130));
 	else if (i % 5 == 2)
-		return (make_rgbt(252, 255, 247, 160));
+		return (make_rgbt(152, 185, 147, 242));
 	else if (i % 5 == 3)
-		return (make_rgbt(33, 160, 160, 170));
+		return (make_rgbt(233, 230, 190, 150));
 	else
-		return (make_rgbt(4, 104, 101, 180));
+		return (make_rgbt(184, 154, 201, 150));
 }
 
 int	get_pal(int i, int pal_no)
@@ -66,25 +66,3 @@ int	get_pal(int i, int pal_no)
 		return (pal_3(i));
 	return (pal_1(i));
 }
-
-/*int get_pal(int i)
-{
-    int index = i % 8; // Adjust the modulo value based on your palette size
-    int next_index = (index + 1) % 8;
-
-    // Get the colors for the current and next index
-    int color1 = pal_1(index);
-    int color2 = pal_1(next_index);
-
-    // Calculate the interpolation factor based on the fractional part of i/8
-    double f = i / 8.0 - floor(i / 8.0);
-
-    // Interpolate the colors
-    int r = (int)(f * get_color(color2, 'r') + (1 - f) * get_color(color1, 'r'));
-    int g = (int)(f * get_color(color2, 'g') + (1 - f) * get_color(color1, 'g'));
-    int b = (int)(f * get_color(color2, 'b') + (1 - f) * get_color(color1, 'b'));
-    int t = (int)(f * get_color(color2, 't') + (1 - f) * get_color(color1, 't'));
-
-    return (make_rgbt(r, g, b, t));
-}
-*/

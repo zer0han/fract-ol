@@ -6,7 +6,7 @@
 /*   By: rdalal <rdalal@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/22 18:19:10 by rdalal            #+#    #+#             */
-/*   Updated: 2024/10/28 18:18:16 by rdalal           ###   ########.fr       */
+/*   Updated: 2024/11/03 18:58:51 by rdalal           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,9 +42,9 @@ int	key_handler(int keycode, t_vars *vars)
 	else if (keycode == 's')
 		vars->y0 = vars->y0 - STEP * vars->zoom;
 	else if (keycode == '=')
-		vars->max_iter += 2;
+		vars->max_iter += 5;
 	else if (keycode == '-')
-		vars->max_iter -= 2;
+		vars->max_iter -= 5;
 	else if (keycode == '1')
 		vars->pal_no = 1;
 	else if (keycode == '2')
@@ -52,7 +52,7 @@ int	key_handler(int keycode, t_vars *vars)
 	else if (keycode == '3')
 		vars->pal_no = 3;
 	else if (keycode == 'z')
-		vars->cy += 0.01;
+		vars->cy -= 0.01;
 	else if (keycode == 'x')
 		vars->cx -= 0.01;
 	else if (keycode == 65307 || keycode == 'q')
